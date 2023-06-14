@@ -2,6 +2,7 @@ import MysqlDataSource from "../database/database"
 import { User } from "../models/admin"
 import { Book } from "../models/book"
 import { Contact } from "../models/contact"
+import {Location } from "../models/location"
 
 class siteController {
   public static index(req: any, res: any, next: any) {
@@ -32,8 +33,6 @@ class siteController {
     res.render('CommentManagement', {data : listContact})
   }
     
-
-
 
 }
 export default  new siteController()
