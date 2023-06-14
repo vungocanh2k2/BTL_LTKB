@@ -51,7 +51,7 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-chat-dots-fill"></i></div>
                             Comment Management
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/">
                             <div class="sb-nav-link-icon"><i class="bi bi-power"></i></div>
                             Log Out
                         </a>
@@ -91,19 +91,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                       {{#each data}}
                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>  
-                                            <td></td>
+                                            <td>{{this.whereto}}</td>
+                                            <td>{{this.howmany}}</td>  
+                                            <td>{{this.arrivals}}</td>
+                                            <td>{{this.leaving}}</td>
                                             <td>
-                                              <a href="/AddAccount" class="btn btn-success  btn-sm" title="Add new Patient"><i class="bi bi-plus-circle"></i>add</a>
                                                 <a href="" title="Edit Account"><button class="btn btn-primary btn-sm"><i class="bi bi-pencil"aria-hidden="true"></i>edit</button></a>
                                                 <form action="" method="POST"  accept-charset="UTF-8" style="display: inline;">
                                                     <button type="submit" title="Delete Account" class="btn btn-danger btn-sm"><i class="bi bi-trash" aria-hidden="true">delete</i></button></a>
                                                 </form>
                                             </td>
                                         </tr>
+                                      {{/each}}  
                                     </tbody>
                                 </table>
                             </div>

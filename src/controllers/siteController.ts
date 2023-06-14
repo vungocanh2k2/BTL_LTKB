@@ -1,3 +1,8 @@
+import MysqlDataSource from "../database/database"
+import { User } from "../models/admin"
+import { Book } from "../models/book"
+import { Contact } from "../models/contact"
+
 class siteController {
   public static index(req: any, res: any, next: any) {
     // return
@@ -9,5 +14,26 @@ class siteController {
   public static create(req: any, res: any, next: any) {
     return
   }
+  async listAcc(req: any, res: any, next: any) {
+    // return
+    const listAcc = await MysqlDataSource.manager.find(User)
+    res.render('AccountManagement', {data : listAcc})
 }
-export default siteController
+   
+    async listBook(req: any, res: any, next: any) {
+  // return
+    const listBook = await MysqlDataSource.manager.find(Book)
+    res.render('OderManagement', {data : listBook})
+}
+
+    async listContact(req: any, res: any, next: any) {
+  // return
+    const listContact = await MysqlDataSource.manager.find(Contact)
+    res.render('CommentManagement', {data : listContact})
+  }
+    
+
+
+
+}
+export default  new siteController()

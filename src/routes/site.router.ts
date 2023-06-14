@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express"
+import siteController from "../controllers/siteController";
 
 const router = Router();
 router.get('/quenmatkhau', (req: Request ,res: Response  ) => {
@@ -21,21 +22,19 @@ router.get('/admin', (req: Request ,res: Response  ) => {
 })
 
 
-router.get('/AccountManagement', (req: Request ,res: Response  ) => {
-  res.render('AccountManagement')
-})
+router.get('/AccountManagement', siteController.listAcc)
 
 
-router.get('/OderManagement', (req: Request ,res: Response  ) => {
-  res.render('OderManagement')
-})
+router.get('/OderManagement', siteController.listBook)
 
 
-router.get('/CommentManagement', (req: Request ,res: Response  ) => {
-  res.render('CommentManagement')
-})
+router.get('/CommentManagement',siteController.listContact)
 
 router.get('/AddAccount', (req: Request ,res: Response  ) => {
   res.render('AddAccount')
+})
+
+router.get('/EditAccount', (req: Request ,res: Response  ) => {
+  res.render('EditAccount')
 })
 export default router
