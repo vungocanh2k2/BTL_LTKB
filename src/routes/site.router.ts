@@ -30,7 +30,6 @@ router.get('/OderManagement', siteController.listBook)
 
 router.get('/CommentManagement',siteController.listContact)
 
-router.get('/',siteController.listLCT)
 
 
 router.get('/AddAccount', (req: Request ,res: Response  ) => {
@@ -40,4 +39,10 @@ router.get('/AddAccount', (req: Request ,res: Response  ) => {
 router.get('/EditAccount', (req: Request ,res: Response  ) => {
   res.render('EditAccount')
 })
+
+
+router.get('/',siteController.listLCT)
+
+router.get('/',siteController.listSVC)
+
 export default router

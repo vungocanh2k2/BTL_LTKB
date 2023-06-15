@@ -2,6 +2,7 @@ import { User } from "../models/admin";
 import { Book } from "../models/book";
 import { Contact } from "../models/contact";
 import { Location } from "../models/location";
+import { Service } from "../models/service";
 import { Admin, DataSource } from "typeorm";
 const MysqlDataSource = new DataSource({
   type: "mysql",
@@ -10,7 +11,7 @@ const MysqlDataSource = new DataSource({
   username: "root",
   password: "",
   database: "travel",
-  entities: [User,Book,Contact,Location],
+  entities: [User,Book,Contact,Location,Service],
   synchronize: true,
   logging: true,
 });

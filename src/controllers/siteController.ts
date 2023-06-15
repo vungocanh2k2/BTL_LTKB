@@ -3,6 +3,7 @@ import { User } from "../models/admin"
 import { Book } from "../models/book"
 import { Contact } from "../models/contact"
 import {Location } from "../models/location"
+import { Service } from "../models/service"
 
 class siteController {
   public static index(req: any, res: any, next: any) {
@@ -23,6 +24,12 @@ class siteController {
     res.render('index', {data : listLCT})
 }
 
+
+async listSVC(req: any, res: any, next: any) {
+  // return
+  const listSVC = await MysqlDataSource.manager.find(Location)
+  res.render('index', {data : listSVC})
+}
 
   async listAcc(req: any, res: any, next: any) {
     // return
