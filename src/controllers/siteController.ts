@@ -15,6 +15,15 @@ class siteController {
   public static create(req: any, res: any, next: any) {
     return
   }
+
+
+  async listLCT(req: any, res: any, next: any) {
+    // return
+    const listLCT = await MysqlDataSource.manager.find(Location)
+    res.render('index', {data : listLCT})
+}
+
+
   async listAcc(req: any, res: any, next: any) {
     // return
     const listAcc = await MysqlDataSource.manager.find(User)

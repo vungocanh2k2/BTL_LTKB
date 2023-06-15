@@ -7,9 +7,9 @@ router.get('/quenmatkhau', (req: Request ,res: Response  ) => {
 })
 
 
-router.get('/', (req: Request ,res: Response  ) => {
-  res.render('index')
-})
+// router.get('/', (req: Request ,res: Response  ) => {
+//   res.render('index')
+// })
 
 
 router.get('/quayve', (req: Request ,res: Response  ) => {
@@ -29,6 +29,9 @@ router.get('/OderManagement', siteController.listBook)
 
 
 router.get('/CommentManagement',siteController.listContact)
+
+router.get('/',siteController.listLCT)
+
 
 router.get('/AddAccount', (req: Request ,res: Response  ) => {
   res.render('AddAccount')
