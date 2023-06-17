@@ -514,36 +514,36 @@ header .search-bar-container label:hover {
     font-size: 1.7rem;
 }
 
-.contact .row {
+.evaluate .row {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
 }
 
-.contact .row .image {
+.evaluate .row .image {
     flex: 1 1 35rem;
 }
 
-.contact .row .image img {
+.evaluate .row .image img {
     width: 100%;
 }
 
-.contact .row form {
+.evaluate .row form {
     flex: 1 1 50rem;
     padding: 2rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
 }
 
-.contact .row form .inputBox {
+.evaluate .row form .inputBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.contact .row form .inputBox input,
-.contact .row form textarea {
+.evaluate .row form .inputBox input,
+.evaluate .row form textarea {
     width: 49%;
     margin: 1rem 0;
     padding: 1rem;
@@ -553,7 +553,7 @@ header .search-bar-container label:hover {
     text-transform: none;
 }
 
-.contact .row form textarea {
+.evaluate.row form textarea {
     height: 15rem;
     resize: none;
     width: 100%;
@@ -667,7 +667,7 @@ header .search-bar-container label:hover {
     .heading span {
         font-size: 2.5rem;
     }
-    .contact .row form .inputBox input {
+    .evaluate .row form .inputBox input {
         width: 100%;
     }
 }

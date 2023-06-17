@@ -18,14 +18,14 @@ router.get('/admin', (req: Request ,res: Response  ) => {
   res.render('admin')
 })
 router.get('/AccountManagement', (req: Request ,res: Response  ) => {
-  res.render('AccountManagement')
+  res.redirect('/admin/account')
 })
 router.get('/OderManagement', (req: Request ,res: Response  ) => {
-  res.render('OderManagement')
+  res.redirect('/admin/book')
 })
 
 router.get('/CommentManagement', (req: Request ,res: Response  ) => {
-  res.render('CommentManagement')
+  res.redirect('/admin/evaluate')
 })
 
 router.get('/AddAccount', (req: Request ,res: Response  ) => {

@@ -16,20 +16,23 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!--Logo-->
-        <a class="navbar-brand" href="/adim"> TRAVEL </a>
+        <a class="navbar-brand" href="/admin"> TRAVEL </a>
 
         <!--Logout-->
+         {{#each data}}
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             <ul class="navbar-nav ml-auto ml-md-0">
                 <li class="nav-item dropdown">
                     <ul class="navbar-nav ml-auto ml-md-0">
                         <li class="nav-item dropdown">
                             <div class="small" style="margin-right: 10px; float:left;color:antiquewhite;">Tài Khoản Admin:
+                                <img src="" alt="" class="user_adim">{{this.nameadmin}}
                             </div>
                             </div>
                         </li>
                     </ul>
         </form>
+         {{/each}}
 
         <!--Menu-->
     </nav>
@@ -74,7 +77,7 @@
                     </ol>
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-motorcycle"></i>Account Data &emsp; &emsp;
+                           Account Data &emsp; &emsp;
 
                         </div>
 
@@ -96,7 +99,7 @@
                                             <td>{{this.nameadmin}}</td>
                                             <td>{{this.email}}</td>
                                             <td>{{this.password}}</td>  
-                                             <td>{{this.image}}</td> 
+                                             <td>{{this.imageadmin}}</td> 
                                             <td>
                                               <a href="/AddAccount" class="btn btn-success  btn-sm" title="Add new Patient"><i class="bi bi-plus-circle"></i>add</a>
                                                 <a href="/EditAccount" title="Edit Account"><button class="btn btn-primary btn-sm"><i class="bi bi-pencil"aria-hidden="true"></i>edit</button></a>

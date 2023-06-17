@@ -1,16 +1,13 @@
 import { Entity, Column, BaseEntity, PrimaryGeneratedColumn } from 'typeorm'
-
 @Entity()
-export class Message extends BaseEntity {
+export class Evaluate extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number
-
+  idevaluate: number;
   @Column()
-  userSend: string
-
+  name: string
   @Column()
-  userReceive: string
-
+  email: string
   @Column()
-  content: string
+  comment: string
+
 }

@@ -32,9 +32,7 @@ class authController{
   // create a session and redirect to /admin
   // (req.session as any).user = user;
   
-  }
-    
-  
+  }    
   public static create(req: any, res: any, next: any) {
     return
   }
