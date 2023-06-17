@@ -16,7 +16,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!--Logo-->
-        <a class="navbar-brand" href="/adim"> TRAVEL </a>
+        <a class="navbar-brand" href="/admin"> TRAVEL </a>
 
         <!--Logout-->
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -88,7 +88,7 @@
                                             <th> Mumber </th>
                                             <th> Subject </th>
                                             <th> Message </th>
-                                            <th> Action </th>
+                                           
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -99,12 +99,6 @@
                                             <td>{{this.number}}</td>  
                                             <td>{{this.subject}}</td>
                                             <td>{{this.message}}</td>
-                                            <td>
-                                                <a href="" title="Edit Account"><button class="btn btn-primary btn-sm"><i class="bi bi-pencil"aria-hidden="true"></i>edit</button></a>
-                                                <form action="" method="POST"  accept-charset="UTF-8" style="display: inline;">
-                                                    <button type="submit" title="Delete Account" class="btn btn-danger btn-sm"><i class="bi bi-trash" aria-hidden="true">delete</i></button></a>
-                                                </form>
-                                            </td>
                                         </tr>
                                       {{/each}}
                                     </tbody>

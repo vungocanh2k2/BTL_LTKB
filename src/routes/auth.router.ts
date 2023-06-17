@@ -4,5 +4,7 @@ const router = Router();
 
 router.post('/login', authController.login)
 
+// router.get('/', authController.login)
+
 
 export default router

@@ -13,4 +13,6 @@ export class Location extends BaseEntity {
    evaluate: string
   @Column()
    price: string
+   @Column()
+   report: string
 }

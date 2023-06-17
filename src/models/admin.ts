@@ -4,6 +4,8 @@ export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id :number;
   @Column()
+  imageadmin: string
+  @Column()
   nameadmin: string
   @Column()
   email: string

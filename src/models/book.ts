@@ -1,4 +1,4 @@
-import { Entity, Column, BaseEntity, PrimaryGeneratedColumn } from 'typeorm'
+import { Entity, Column, BaseEntity, PrimaryGeneratedColumn,OneToOne } from 'typeorm'
 @Entity()
 export class Book extends BaseEntity {
   @PrimaryGeneratedColumn()

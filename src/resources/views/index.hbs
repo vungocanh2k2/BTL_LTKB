@@ -39,17 +39,16 @@
 
         <i class="fas fa-times" id="form-close"></i>
 
-        <form method="post" action="/login">
+        <form method="post" action="/account/login">
             <h3>login</h3>
             <input name="username" type="email" class="box" placeholder="enter your email">
             <input name="password" type="password" class="box" placeholder="enter your password">
            <input type="submit" value="login now" class="btn"> 
             <input type="checkbox" id="remember">
             <label for="remember">remember me</label>
-            <p>forget password? <a href="/quenmatkhau">click here</a></p>
+            <p>forget password? <a href="/forgetpassword">click here</a></p>
           <!--  <p>don't have and account? <a href="#">register now</a></p> -->
         </form>
-
     </div>
 
     <!-- home section starts  -->
@@ -142,7 +141,7 @@
 
         <div class="box-container">
         
-          {{#each data}}
+          {{#each data.products1}}
             <div class="box">
                 <img src="{{this.image}}" alt="">
                 <div class="content">
@@ -181,15 +180,41 @@
             <span>s</span>
         </h1>
 
-        <div class="box-container">
-          {{#each data}}
-            <div class="box">
-                <i class="">{{}}</i>
-                <h3>affordable hotels</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-            </div>
+         <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>Cheap hotel, suitable for everyone. The hotel is fully furnished and airy, the location is near the places you go to travel</p>
         </div>
-         {{/each}}
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Food and drink must be hygienic and have a certificate of food safety and hygiene. Food and fare are prepared by highly skilled chefs and quarnlys</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safty guide</h3>
+            <p>English language information guide, cheerful, enthusiastic with tourists and especially knowledgeable about the history and beautiful scenery of the locality</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>tourist location</h3>
+            <p>Regularly updated tourist locations. travel takes people to new destinations and seems to help people have a safe trip and feel new</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p>Fast and safe means of transportation in tourist destinations, drivers with long experience in the profession</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p>The trip ensures you have a memorable travel experience when you come here. you can learn more about the people, history and culture of the place you travel to</p>
+        </div>
+
+    </div>
+
     </section>
 
     <!-- services section ends -->
@@ -209,80 +234,16 @@
         </h1>
 
         <div class="box-container">
-
+          {{#each data.products1}}
             <div class="box">
-                <img src="images/g-1.jpg" alt="">
+                <img src="{{this.image}}" alt="">
                 <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
+                    <h3>{{this.location}}</h3>
+                    <p>Find out more</p>
+                    <a href="{{this.report}}" class="btn">see more</a>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/g-2.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-3.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-4.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-5.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-6.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-7.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-8.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images/g-9.jpg" alt="">
-                <div class="content">
-                    <h3>amazing places</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                    <a href="#" class="btn">see more</a>
-                </div>
-            </div>
-
+              {{/each}}
         </div>
 
     </section>

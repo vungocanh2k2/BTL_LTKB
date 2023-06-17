@@ -2,35 +2,31 @@ import { Router, Request, Response } from "express"
 import siteController from "../controllers/siteController";
 
 const router = Router();
-router.get('/quenmatkhau', (req: Request ,res: Response  ) => {
+router.get('/forgetpassword', (req: Request ,res: Response  ) => {
   res.render('fogot')
 })
 
 
-// router.get('/', (req: Request ,res: Response  ) => {
-//   res.render('index')
-// })
+ router.get('/' ,siteController.index)
 
 
-router.get('/quayve', (req: Request ,res: Response  ) => {
+router.get('/back', (req: Request ,res: Response  ) => {
   res.render('index')
 })
-
 
 router.get('/admin', (req: Request ,res: Response  ) => {
   res.render('admin')
 })
+router.get('/AccountManagement', (req: Request ,res: Response  ) => {
+  res.render('AccountManagement')
+})
+router.get('/OderManagement', (req: Request ,res: Response  ) => {
+  res.render('OderManagement')
+})
 
-
-router.get('/AccountManagement', siteController.listAcc)
-
-
-router.get('/OderManagement', siteController.listBook)
-
-
-router.get('/CommentManagement',siteController.listContact)
-
-
+router.get('/CommentManagement', (req: Request ,res: Response  ) => {
+  res.render('CommentManagement')
+})
 
 router.get('/AddAccount', (req: Request ,res: Response  ) => {
   res.render('AddAccount')
@@ -40,9 +36,9 @@ router.get('/EditAccount', (req: Request ,res: Response  ) => {
   res.render('EditAccount')
 })
 
+router.get('/EditOder', (req: Request ,res: Response  ) => {
+  res.render('EditOder')
+})
 
-router.get('/',siteController.listLCT)
-
-router.get('/',siteController.listSVC)
 
 export default router
